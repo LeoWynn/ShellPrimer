@@ -1,0 +1,87 @@
+流程控制:if, for, which, until, case, break, continue, 
+
+1 if 格式：
+
+if condition1
+then
+    command1
+elif condition2 
+then 
+    command2
+else
+    commandN
+fi
+
+2 for 循环
+
+for var in item1 item2 ... itemN
+do
+    command1
+    command2
+    ...
+    commandN
+done
+
+for loop in 1 2 3 4 5
+do
+    echo "The value is: $loop"
+done
+
+3 while 语句
+
+while condition
+do
+    command
+done
+
+无限循环语法格式：或while true
+while :
+do
+    command
+done
+
+4 until 循环
+until循环执行一系列命令直至条件为真时停止。
+until condition
+do
+    command
+done
+
+5 case
+Shell case语句为多选择语句。可以用case语句匹配一个值与一个模式，如果匹配成功，执行相匹配的命令。case语句格式如下：
+case 值 in
+模式1)
+    command1
+    command2
+    ...
+    commandN
+    ;;
+模式2）
+    command1
+    command2
+    ...
+    commandN
+    ;;
+esac
+
+echo '输入 1 到 4 之间的数字:'
+echo '你输入的数字为:'
+read aNum
+case $aNum in
+    1)  echo '你选择了 1'
+    ;;
+    2)  echo '你选择了 2'
+    ;;
+    3)  echo '你选择了 3'
+    ;;
+    4)  echo '你选择了 4'
+    ;;
+    *)  echo '你没有输入 1 到 4 之间的数字'
+    ;;
+esac
+
+6 break命令
+break命令允许跳出所有循环（终止执行后面的所有循环）
+
+7 continue
+continue命令与break命令类似，只有一点差别，它不会跳出所有循环，仅仅跳出当前循环。
